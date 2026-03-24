@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-barlow: 'Barlow Condensed', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* DARK THEME BASE */
+body {
+  background-color: #0a0a0f;
+  color: #e4e4e7;
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #0a0a0f; }
+::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+/* TEXT SELECTION */
+::selection { background: #6366f1; color: #ffffff; }
+
+/* TYPOGRAPHY */
+.font-display {
+  font-family: var(--font-barlow) !important;
+}
+
+.hero-text {
+  font-family: var(--font-barlow);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* LINK + BUTTON SMOOTH */
+a, button {
+  transition: all 0.2s ease;
+}
+
+/* GRID BACKGROUND (optional subtle effect) */
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(228,228,231,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(228,228,231,0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* CARD STYLES */
+.card {
+  background: #111111;
+  border: 1px solid #27272a;
+  border-radius: 12px;
+}
+
+/* HOVER EFFECTS */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  border-color: #6366f1;
+}
+
+/* TECH TAG */
+.tech-tag {
+  background: #111111;
+  color: #a1a1aa;
+  border: 1px solid #27272a;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+/* DIVIDER */
+.divider {
+  height: 1px;
+  background: #27272a;
+}
+
+/* INPUT (if used later) */
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  background: #111111;
+  border: 1px solid #27272a;
+  color: #e4e4e7;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: #6366f1;
+}
+
+/* BUTTON PRIMARY */
+.btn-primary {
+  background: #6366f1;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.btn-primary:hover {
+  background: #4f46e5;
+}
