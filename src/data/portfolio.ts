@@ -330,3 +330,4 @@ export const skillsMarquee = [
     "AntiGravity",
     "Gemini API",
 ];
+ 
