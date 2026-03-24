@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, GraduationCap, Cpu, Code, ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 import { personal, aboutStats } from '@/data/portfolio';
 
 export default function About() {
@@ -9,7 +10,7 @@ export default function About() {
     <section id="about" className="py-24 px-6 border-y border-zinc-100 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1.2fr_0.8fr] gap-12 lg:gap-16 items-center">
-          
+
           {/* Left Column: Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -21,7 +22,7 @@ export default function About() {
                 ABOUT ME
               </h2>
             </div>
-              
+
               <div className="mb-8">
                 <h3 className="text-2xl font-bold text-zinc-800 mb-2 uppercase tracking-wide">{personal.name}</h3>
                 <p className="text-zinc-500 flex items-center gap-2 text-sm italic">
@@ -46,20 +47,20 @@ export default function About() {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4">
-              <a 
-                href={personal.social.github} 
+              <a
+                href={personal.social.github}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 hover:text-indigo-600 hover:border-indigo-200 transition-all text-sm font-medium"
               >
                 GitHub Profile <ExternalLink size={14} />
               </a>
-              <a 
-                href={personal.social.linkedin} 
+              <a
+                href={personal.social.linkedin}
                 className="flex items-center gap-2 px-5 py-2.5 rounded-full border border-zinc-200 bg-zinc-50 text-zinc-600 hover:text-indigo-600 hover:border-indigo-200 transition-all text-sm font-medium"
               >
                 LinkedIn <ExternalLink size={14} />
               </a>
-              <a 
-                href={personal.resume} 
+              <a
+                href={personal.resume}
                 target="_blank"
                 className="flex items-center gap-2 px-9 py-4 rounded-full bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-105 transition-all text-sm font-black uppercase tracking-tighter shadow-xl shadow-indigo-100"
               >
@@ -76,14 +77,15 @@ export default function About() {
             className="hidden lg:flex items-center justify-end relative"
           >
             <div className="relative z-10 rounded-full overflow-hidden w-full max-w-[580px] aspect-square shadow-2xl shadow-indigo-500/10 group border-[7px] border-zinc-100 bg-white">
-              <img 
-                src="/ayush_photo.jpg" 
+              <Image
+                src="/ayush_photo.jpg"
                 alt={personal.name}
-                className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
+                fill
+                className="object-cover object-top transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-white/20 via-transparent to-transparent" />
             </div>
-            
+
             {/* Background Accent Lines */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-zinc-800/20 rounded-full -z-10" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] border border-zinc-800/10 rounded-full -z-10" />

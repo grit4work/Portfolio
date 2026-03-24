@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence, useInView, useMotionValue, useSpring } from 'framer-motion';
 import { Award, Calendar, Building2, ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 import { certifications } from '@/data/portfolio';
 
 const categoryColors: Record<string, string> = {
@@ -94,16 +95,17 @@ export default function Certifications() {
                 className="group relative rounded-[2.5rem] bg-zinc-50 border border-zinc-100 overflow-hidden shadow-xl shadow-zinc-200/40 hover:shadow-2xl hover:bg-white transition-all duration-500 flex flex-col h-full"
               >
                 {/* Preview Image */}
-                <a 
-                  href={cert.link} 
-                  target="_blank" 
+                <a
+                  href={cert.link}
+                  target="_blank"
                   rel="noreferrer"
                   className="relative h-72 w-full overflow-hidden bg-zinc-200 block"
                 >
-                  <img 
-                    src={cert.image} 
+                  <Image
+                    src={cert.image}
                     alt={cert.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center">
                     <div className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all scale-50 group-hover:scale-100">

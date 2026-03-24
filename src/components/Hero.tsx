@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import Image from 'next/image';
 import { personal } from '@/data/portfolio';
 
 export default function Hero() {
@@ -22,10 +23,11 @@ export default function Hero() {
            className="relative"
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[510px] lg:h-[510px] rounded-full overflow-hidden border-[11px] border-zinc-900/50 shadow-2xl">
-            <img 
-              src="/ayush_photo.jpg" 
-              alt="Ayush Chauhan Avatar" 
-              className="w-full h-full object-cover object-top"
+            <Image
+              src="/ayush_photo.jpg"
+              alt="Ayush Chauhan Avatar"
+              fill
+              className="object-cover object-top"
             />
           </div>
           {/* Decorative Rings */}
